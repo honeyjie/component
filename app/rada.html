@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/jquery-ui/jquery-ui.min.js"></script>
+
+    <script type="text/javascript" src="./scripts/rada.js"></script>
+    <link rel="stylesheet" href="./styles/rada.css">
+
+    <script type="text/javascript" src="./scripts/Base.js"></script>
+    <link rel="stylesheet" type="text/css" href="./styles/Base.css">
+</head>
+<body> 
+    <div class="iphone">
+    </div>
+    <script src = "../bower_components/hidpi-canvas/dist/hidpi-canvas.js"></script>
+    <script>
+        var getPixelRatio = function(context) {
+        var backingStore = context.backingStorePixelRatio ||
+              context.webkitBackingStorePixelRatio ||
+              context.mozBackingStorePixelRatio ||
+              context.msBackingStorePixelRatio ||
+              context.oBackingStorePixelRatio ||
+              context.backingStorePixelRatio || 1;
+
+        return (window.devicePixelRatio || 1) / backingStore;
+    };
+    </script>
+    <script>
+        var cfg = {
+            type: "rada",
+            width: 500,
+            height: 500, 
+            data: [
+                ["JAVA", "46%", "#003399"],
+                ["Linux", "10%"],
+                ["Phtyon", "3.8%"],
+                ["C", "3%"],
+                ["C++", "4.6%"],
+                ["Go", "1.5%"],
+                ["PHP", "30%"]
+            ],
+            animateIn: {top: 200, opacity: 1},
+            animateOut: {top: 100, opacity: 1},
+            css: {
+                top: 100,
+                left: 20,
+                opacity: 1
+            },
+            center: true
+        }
+        var rada = new Rada("myname", cfg);
+        $(".iphone").append( rada );
+         var load = true;
+        $("body").click(function(){
+            load = !load;
+            $(".h5_component").trigger( load ? "onLeave": "onLoad");
+        })
+    </script>
+</body>
+</html>

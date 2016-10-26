@@ -1,0 +1,5 @@
+body {
+/*    width: 100%;
+    height: 100%;*/
+    background-image: "#red" url(../app/images/back.png) no-repeat center center;
+}

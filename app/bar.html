@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/jquery-ui/jquery-ui.min.js"></script>
+
+    <script type="text/javascript" src="./scripts/bar.js"></script>
+    <link rel="stylesheet" href="./styles/bar.css">
+
+    <script type="text/javascript" src="./scripts/Base.js"></script>
+    <link rel="stylesheet" type="text/css" href="./styles/Base.css">
+</head>
+<body>
+    <div class="iphone">
+    </div>
+    <script>
+        var cfg = {
+            type: "bar",
+            width: 530,
+            height: 600, 
+            data: [
+                ["Javascript", .4, "#003399"],
+                ["HTML/CSS", .3, "#cc6699"],
+                ["CSS3", .2, "#663399"],
+                ["HTML5", .3, "#cc3399"],
+                ["JQuery", .5, "#660099"],
+                ["Bootstrap", .2, "#ff3399"],
+                ["AngularJs", 0.3, "#663300"],
+            ],
+            animateIn: {top: 200, opacity: 1},
+            animateOut: {top: 100, opacity: 0},
+            css: {
+                top: 100,
+                opacity: 1
+            },
+            center: true
+        }
+        var bar = new Bar("myname", cfg);
+        $(".iphone").append(bar);
+         var load = true;
+        $("body").click(function(){
+            load = !load;
+            $(".h5_component").trigger( load ? "onLeave": "onLoad");
+        })
+    </script>
+</body>
+</html>

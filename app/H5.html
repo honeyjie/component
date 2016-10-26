@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../bower_components/fullpage.js/jquery.fullPage.js"></script>
+
+    <script type="text/javascript" src="./scripts/H5.js"></script>
+    <link rel="stylesheet" href="./styles/H5.css">
+
+    <script type="text/javascript" src="./scripts/Base.js"></script>
+    <link rel="stylesheet" type="text/css" href="./styles/Base.css">
+</head>
+<body>
+  <script>
+    $(function(){
+      var h5 = new H5();
+
+        h5.addPage("face")
+            .addComponent("logo", {
+                type: "base",
+                text: "mytext",
+                width: 514,
+                height: 304, 
+                bg: "../app/images/people.png",
+                css: {
+                    left: 50,
+                    bottom: 0,
+                    opacity: 0
+                }, 
+                animateIn: {bottom: 80, opacity: 1},
+                animateOut: {bottom: 0, opacity: 0},
+                center: true
+            })
+            .addComponent("slogan", {
+                type: "base",
+                text: "mytext",
+                width: 514,
+                height: 304, 
+                bg: "../app/images/people.png",
+                css: {
+                    left: 50,
+                    bottom: 0,
+                    opacity: 0
+                }, 
+                animateIn: {bottom: 80, opacity: 1},
+                animateOut: {bottom: 0, opacity: 0},
+                center: true
+            })
+        h5.addPage("desc")
+            .addComponent("caption", {
+                type: "base",
+                text: "mytext",
+                width: 514,
+                height: 304, 
+                bg: "../app/images/people.png",
+                css: {
+                    left: 50,
+                    bottom: 0,
+                    opacity: 0
+                }, 
+                animateIn: {bottom: 80, opacity: 1},
+                animateOut: {bottom: 0, opacity: 0},
+                center: true
+            })
+        h5.addPage("page-3")
+            .addComponent("caption", {
+                type: "base",
+                text: "mytext",
+                width: 514,
+                height: 304, 
+                bg: "../app/images/people.png",
+                css: {
+                    left: 50,
+                    bottom: 0,
+                    opacity: 0
+                }, 
+                animateIn: {bottom: 80, opacity: 1},
+                animateOut: {bottom: 0, opacity: 0},
+                center: true
+            })
+        .loader();
+    })
+  </script>
+
+</body>
+</html>

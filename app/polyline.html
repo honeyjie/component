@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/jquery-ui/jquery-ui.min.js"></script>
+
+    <script type="text/javascript" src="./scripts/polyline.js"></script>
+    <link rel="stylesheet" href="./styles/polyline.css">
+
+    <script type="text/javascript" src="./scripts/Base.js"></script>
+    <link rel="stylesheet" type="text/css" href="./styles/Base.css">
+</head>
+<body> 
+    <div class="iphone">
+    </div>
+    <script>
+        var cfg = {
+            type: "polyline",
+            width: 640,
+            height: 266*2, 
+            data: [
+                ["Javascript", .4, "#003399"],
+                ["HTML/CSS", .3],
+                ["CSS3", .2],
+                ["HTML5", .3],
+                ["JQuery", .5]
+            ],
+            animateIn: {top: 250, opacity: 1},
+            animateOut: {top: 100, opacity: 0},
+            css: {
+                top: 200,
+                opacity: 1
+            },
+            center: true
+        }
+        var polyline = new Polyline("myname", cfg);
+        $(".iphone").append( polyline );
+         var load = true;
+        $("body").click(function(){
+            load = !load;
+            $(".h5_component").trigger( load ? "onLeave": "onLoad");
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/jquery-ui/jquery-ui.min.js"></script>
+
+    <script type="text/javascript" src="./scripts/pie.js"></script>
+    <link rel="stylesheet" href="./styles/pie.css">
+
+    <script type="text/javascript" src="./scripts/Base.js"></script>
+    <link rel="stylesheet" type="text/css" href="./styles/Base.css">
+</head>
+<body> 
+    <div class="iphone">
+    </div>
+<!--     <script src = "../bower_components/hidpi-canvas/dist/hidpi-canvas.js"></script>
+    <script>
+        var getPixelRatio = function(context) {
+        var backingStore = context.backingStorePixelRatio ||
+              context.webkitBackingStorePixelRatio ||
+              context.mozBackingStorePixelRatio ||
+              context.msBackingStorePixelRatio ||
+              context.oBackingStorePixelRatio ||
+              context.backingStorePixelRatio || 1;
+
+        return (window.devicePixelRatio || 1) / backingStore;
+    };
+    </script> -->
+    <script>
+        var cfg = {
+            type: "pie",
+            width: 300,
+            height: 300, 
+            data: [
+                ["IOS", .25, "#00cc66"],
+                ["Cocos2d-x",.02, "#6633cc"],
+                ["Unity-3D",.02, "#ff66cc"],
+                ["Android", .71, "#003399"]
+            ],
+            // animateIn: {top: 200, opacity: 1},
+            // animateOut: {top: 100, opacity: 1},
+            css: {
+                top: 100,
+            },
+            center: true
+        }
+        var pie = new Pie("myname", cfg);
+        $(".iphone").append( pie );
+         var load = true;
+        $("body").click(function(){
+            load = !load;
+            $(".h5_component").trigger( load ? "onLeave": "onLoad");
+        })
+    </script>
+</body>
+</html>

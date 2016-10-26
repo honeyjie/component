@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="./spec/Base.js"></script>
+    <link rel="stylesheet" href="./spec/Base.css">
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+</style>
+<body>
+    <div class="iphone">
+        
+    </div>
+    <script>
+        var cfg = {
+            type: "base",
+            text: "mytext",
+            width: 514,
+            height: 304, 
+            bg: "../app/images/people.png",
+            css: {
+                left: 50,
+                bottom: 0,
+                opacity: 0
+            }, 
+            animateIn: {bottom: 80, opacity: 1},
+            animateOut: {bottom: 0, opacity: 0},
+            center: true,
+            toRelative: true
+        }
+        var h5 = new Base("myname", cfg);
+        $(".iphone").append(h5);
+
+        var load = true;
+        $("body").click(function(){
+            load = !load;
+            $(".h5_component").trigger( load ? "onLeave": "onLoad");
+        })
+    </script>
+</body>
+</html>

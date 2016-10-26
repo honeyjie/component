@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/jquery-ui/jquery-ui.min.js"></script>
+
+    <script type="text/javascript" src="./scripts/point.js"></script>
+    <link rel="stylesheet" href="./styles/point.css">
+
+    <script type="text/javascript" src="./scripts/Base.js"></script>
+    <link rel="stylesheet" type="text/css" href="./styles/Base.css">
+</head>
+<body>
+    <div class="iphone">
+        
+    </div>
+    <script>
+        var cfg = {
+            type: "point",
+            width: 300,
+            height: 300, 
+            data: [
+                ["A项", .4, "green"],
+                ["B项", .3, "orange", "0", "-80%"],
+                ["C项", .2, "yellow", "0", "120%"]
+            ],
+            css: {
+                bottom: 80,
+                // opacity: 1
+            },
+            animateIn: {bottom: 100, opacity: 1},
+            animateOut: {bottom: 0, opacity: 0},
+            center: true
+        }
+        var h5 = new Point("myname", cfg);
+    </script>
+</body>
+</html>

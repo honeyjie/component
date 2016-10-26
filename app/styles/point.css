@@ -1,0 +1,15 @@
+.point {
+    position: absolute;
+    border-radius: 50%;
+}
+.point .name {
+    height: 30px;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    margin-top: -15px;
+}
+.point .per {
+    font-size: 0.5em;
+}

@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mocha Spec Runner</title>
+  <meta name="viewpoint" content="width=device-width, height=device-height, initial = 1, minmum-scale=1, maximum-scale=1, user-scalable = no">
+  <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="../bower_components/jquery-ui/jquery-ui.min.js"></script>
+  <script src="../bower_components/fullpage.js/jquery.fullPage.js"></script>
+</head>
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+/*        width: 100%;
+        height: 100%;*/
+    }
+</style>
+<body>
+  <div id="h5">
+    <div id = "page-1" class="page section">
+      <div class="component log">log</div>
+      <div class="component slogan">slogan</div>
+    </div>
+    <div id = "page-2" class="page section">
+      <div class="component desc">Second</div>
+    </div>
+    <div id = "page-3" class="page section">
+      <div class="component bar"></div>
+    </div>
+  </div>
+  <script>
+    $(function(){
+      $("#h5").fullpage({
+        "sectionsColor": ["#cc3399", "#00cc99", "#cccc99"]
+      })
+    })
+  </script>
+</body>
+</html>
